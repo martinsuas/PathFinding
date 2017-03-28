@@ -1,0 +1,27 @@
+import java.util.*;
+
+/**
+ * Class used to represent a vertex, or in this case, a location on the RIT campus.
+ */
+public class Vertex {
+    // A three letter name.
+    public String name;
+    // Used for marking algorithms
+    public boolean visited;
+    // The list of edges this vertex is connected to.
+    public ArrayList<Edge> edges;
+
+    Vertex(String name) {
+        this.name = name;
+        this.visited = false;
+        this.edges = new ArrayList<Edge>();
+    }
+
+    public String toString() {
+        String res = " => ";
+        for ( int e : edges ) {
+            res += e + " ";
+        }
+        return res;
+    }
+}

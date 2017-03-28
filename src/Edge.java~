@@ -1,0 +1,29 @@
+import java.lang.*
+
+
+public class Edge {
+    public Vertex v1, v2;
+    public int weight;
+
+    public String toString() {
+        String res = "[" + v1 + "] -- " + weight + " -- [" + v2 + "]";
+        return res;
+    }
+
+    /**
+     * Given one of the two vertices of this edge, find the connecting one.
+     * @param v1 - Should be
+     * @return
+     */
+    public Vertex to(Vertex v1) {
+        if (v1 == this.v1) {
+            return v2;
+        } else if (v2 == this.v2) {
+            return v1;
+        } else {
+            throw new IllegalArgumentException;
+        }
+    }
+
+
+}
