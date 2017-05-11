@@ -11,7 +11,7 @@ java PathMain [a_star|bfs|backtracking] $filename
 
 NOTE: A* is only currently working with supplied dataset.
 
-##Format
+## Format
 
 The file representing the graph should be placed in the 'src' folder. 
 Each line in the file should use the following pattern:
